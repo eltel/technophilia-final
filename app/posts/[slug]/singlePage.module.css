@@ -114,12 +114,6 @@
   flex: 5;
 }
 
-.container-class p:nth-child(1) {
-  font-weight: bold;
-  color: blue;
-  /* Add other styles as needed */
-}
-
 @media screen and (max-width: 1536px) {
   .title {
     font-size: 42px;

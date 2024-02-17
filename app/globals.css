@@ -115,3 +115,10 @@ body {
 .customScrollbar *::-webkit-scrollbar {
   display: none;
 }
+
+/* Assuming this is in styles/global.css or a similar file */
+.htmlContent p:first-child {
+  font-weight: bold;
+  /* color: blue; */
+}
+

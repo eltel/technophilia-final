@@ -99,7 +99,7 @@ const SinglePage = async ({ params }: { params: { slug: string } }) => {
   return (
     <div className=''>     
       <div className=''>
-          <h1 className='text-center text-3xl mt-4 font-semibold'>{post?.title}</h1>
+          <h1 className='text-center text-2xl mt-4 font-semibold'>{post?.title}</h1>
         <div className='w-2/3 mx-auto my-8'>
           {post?.img && (
             <div className='relative w/2/3 h-96 '>
@@ -114,7 +114,7 @@ const SinglePage = async ({ params }: { params: { slug: string } }) => {
             </div>
           )}
           <div
-           className='mt-4 text-lg leading-7 text-gray-700 dark:text-gray-300'
+           className='htmlContent mt-4 text-justify text-lg leading-7 text-gray-700 dark:text-gray-300'
             dangerouslySetInnerHTML={{ __html: post?.desc || `<p>No code</p>` }}
           />         
         </div>
