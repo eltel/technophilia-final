@@ -31,3 +31,38 @@ body {
     text-wrap: balance;
   }
 }
+
+.timeline-card-content {
+  height: 400px !important;
+}
+
+.chronoClass * {
+  -ms-overflow-style: none !important;
+  scrollbar-width: 4px !important;
+  /* scrollbar-color: #4a4a4a #0f172a !important; */
+  scrollbar-color: #4a4a4a rgb(var(--background-end-rgb)) !important;
+  scrollbar-width: thin;
+  border-radius: 10px;
+  overflow-x: hidden;
+}
+
+.chronoClass *::-webkit-scrollbar {
+  display: 4px !important;
+  /* scrollbar-color: #4a4a4a #0f172a !important; */
+  scrollbar-color: #4a4a4a rgb(var(--background-end-rgb)) !important;
+  scrollbar-width: thin;
+}
+
+.card-content-wrapper .object-cover {
+  object-fit: cover;
+}
+
+
+.customScrollbar * {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.customScrollbar *::-webkit-scrollbar {
+  display: none;
+}
