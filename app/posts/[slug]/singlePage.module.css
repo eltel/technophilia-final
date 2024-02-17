@@ -1,0 +1,169 @@
+/* .container {
+  display: flex;
+} */
+/* Container for the entire component */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* .infoContainer {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+} */
+.infoContainer {
+  width: 100%;
+
+  /* display: flex; */
+  align-items: center;
+  gap: 50px;
+}
+
+.textContainer {
+  flex: 1;
+}
+
+.title {
+  font-size: 52px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: var(--softTextColor);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.userImageContainer {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--softTextColor);
+}
+
+.username {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+  height: 550px;
+  border: solid 3px;
+  border-color: rgb(118, 118, 118);
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.image {
+  object-fit: contain;
+}
+
+/* .content {
+  display: flex;
+  width: 50%;
+  gap: 50px;
+} */
+/* Content container for the two divs below */
+.content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.post {
+  flex: 5;
+}
+/* .post {
+  flex: 0.66;
+} */
+
+.description p {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.description p:first-child {
+  font-weight: 600;
+}
+
+/* Menu container */
+.menu {
+  /* flex: 0.34; /* Remaining 34% of the screen */
+  /* Add any additional styles you need 
+  margin-left: 180px; */
+  flex: 5;
+}
+
+.container-class p:nth-child(1) {
+  font-weight: bold;
+  color: blue;
+  /* Add other styles as needed */
+}
+
+@media screen and (max-width: 1536px) {
+  .title {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .imageContainer {
+    /* display: none; */
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .imageContainer {
+    /* display: none; */
+    height: 250px;
+  }
+
+  .description p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .imageContainer {
+    /* display: none; */
+    height: 200px;
+  }
+
+  .description p {
+    font-size: 16px;
+  }
+}

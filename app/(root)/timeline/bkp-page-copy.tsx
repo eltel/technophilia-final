@@ -22,6 +22,28 @@ interface Post {
 }
 
 
+/* function getDataURL() {
+  if (process.env.NODE_ENV === "production") {
+    return "https://teu-content-manager-2024.vercel.app";
+  } else {
+    return "http://localhost:3000";
+  }
+}
+ */
+
+/* const getData = async () => {
+  const url = getDataURL();
+  const res = await fetch(`${url}/api/posts/timeline`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
+
+  return res.json();
+}; */
+
 async function getData() {
   const uri = process.env.DATABASE_URL as string;
   const client = new MongoClient(uri);
