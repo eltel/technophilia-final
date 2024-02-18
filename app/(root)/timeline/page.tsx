@@ -30,18 +30,18 @@ export default function Timeline() {
   const [posts, setPosts] = useState<Post[] | undefined>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchPosts = async (page: number, limit: number) => { // Explicitly specify the types for 'page' and 'limit'
       const initialPosts = await getData(page, limit);
       setPosts(initialPosts);
     };
 
-    fetchPosts();
+    fetchPosts(page, limit);
   }, []);
 
   return (
     <div>
-      <div className="flex justify-center items-center .min-h-screen-minus-header" suppressHydrationWarning={true}>
-        <CustomTimeline key={posts?.length} posts={posts || []}  />
+      <div className="flex justify-center items-center w-full min-h-screen-minus-header chronoClass" suppressHydrationWarning={true}>
+        <CustomTimeline key={posts?.length} posts={posts || []} className='custom-scrollbar' />
       </div>
       <LoadMore setPosts={setPosts} posts={posts || []} />
     </div>
