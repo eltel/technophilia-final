@@ -1,19 +1,10 @@
 "use client";
 
 import { Chrono } from "react-chrono";
-import LoadMore from '@/components/infinite-scrolling/LoadMore';
 import { MotionDiv } from "@/components/infinite-scrolling/MotionDiv";
 import Link from "next/link";
 import Image from "next/image";
-
-/* interface Post {
-  _id: string; // Schema.Types.ObjectId;
-  createdAt: Date;
-  slug: string;
-  title: string;
-  desc: string;
-  img: string;
-} */
+import { useEffect } from "react";
 
 interface Post {
   _id: string; // Define _id as a string
@@ -37,7 +28,7 @@ const variants = {
 };
 
 const MainTimeline = ({ posts }: MainTimelineProps) => {
-  console.log('Posts:', posts);
+  // console.log('Posts:', posts);
   const transformedPosts = posts.map((post) => ({
     id: post._id,
     title: post.title,
@@ -53,6 +44,11 @@ const MainTimeline = ({ posts }: MainTimelineProps) => {
     cardDetailedText: post.desc,
     slug: post.slug,
   }));
+
+useEffect(() => {
+  console.log('transformedPosts:', transformedPosts);
+}, [transformedPosts]);
+
 
   // console.log("Transformed posts:", transformedPosts);
 
@@ -150,7 +146,7 @@ const MainTimeline = ({ posts }: MainTimelineProps) => {
     <div style={{ width: "800px", height: "675px" }} className={`chronoClass`} >
       <h1 className="text-center text-2xl mb-6" >Timeline</h1>
       <Chrono
-     suppressHydrationWarning={true}
+        suppressHydrationWarning={true}
         // items={transformedPosts}
         // items={items}
         mode="VERTICAL_ALTERNATING"
